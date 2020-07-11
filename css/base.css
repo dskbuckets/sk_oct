@@ -1,20 +1,21 @@
+@charset "utf-8";
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-size: 100%;
+  /* box-sizing: border-box; */
 }
 body {
-  font-family:
-    'Noto Sans',
-    'Noto Sans JP',
-    "Helvetica Neue",
+  font-family: "Helvetica Neue",
     "Arial",
     "Hiragino Kaku Gothic ProN",
     "Hiragino Sans",
     "Meiryo",
     sans-serif;
   line-height: 1.7;
-  letter-spacing: .05em;
+  width: 100%;
+  overflow-x: hidden;
 }
 img {
   max-width: 100%;
@@ -26,198 +27,1118 @@ iframe {
 li {
   list-style-type: none;
 }
-a {
-  display: block;
-  color: inherit;
-  text-decoration: none;
-}
-button {
-  border: none;
-}
 h1,
 h2,
 h3 {
-  font-size: inherit;
   font-weight: normal;
 }
-
-/* 共通部分 */
-.section-ttl {
-  font-size: 28px;
-  font-weight: bold;
-  letter-spacing: 0.068em;
-  margin-bottom: 30px;
+a {
+  text-decoration: none;
+  color: inherit;
 }
-.section-desc {
-  font-size: 16px;
-  margin-bottom: 30px;
-}
-.section-img {
-  margin-bottom: 30px;
-}
-.section-btn {
-  width: 160px;
-  height: 36px;
-  background-color: #000;
-  color: #fff;
-  font-size: 11px;
-  letter-spacing: 0.015em;
+br.narrowNowrap {
+  display: none;
 }
 
-/* ヘッダー */
+/* ヘッダー
+----------------------------------------------- */
 .header {
-  height: 100vh;
-  background-image:
-    url(../img/kv-img.png),
-    url(../img/bg_kv.png);
-  background-repeat: no-repeat;
-  background-position: left top, right top;
-  background-size: 76.5% 86.9%, 76.5% 100%;
-  color: #fff;
-  margin-bottom: 78px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: #fff;
+  /* width: 100vw; */
+  z-index: 1;
 }
-.header-container {
+.header .wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 21px 15px 0;
-  margin-bottom: 134.5px;
+  font-weight: 600;
 }
 .logo {
-  width: 189px;
+  font-size: .7em;
+  padding: .6em;
 }
-.menu {
-  font-size: 16px;
+.logo img {
+  width: 95px;
 }
-.menu i {
-  font-size: large;
+.btn-inquiry-sp {
+  font-size: .75em;
+  background-color: rgb(207, 92, 57);
+  color: #ffffff;
+  border: none;
+  padding: 1em;
 }
-.copy {
-  margin-left: 30%;
-  margin-bottom: 10px;
-  font-size: 16px;
-  letter-spacing: .063em;
-  font-weight: bold;
-  line-height: 1.5;
+.btn-inquiry-sp img {
+  width: 40%;
 }
-.mainCopy {
-  margin-left: 30%;
-  font-size: 56px;
-  letter-spacing: .063em;
-  font-weight: bold;
+.btn-inquiry-sp a:hover {
+  text-decoration: underline;
+}
+.header .wrapper .btn-inquiry-pc {
+  display: none;
+}
+
+/* メインビジュアル
+----------------------------------------------- */
+.mainVisual{
+  font-weight: 600;
+  height: 250px;
+  background-image: url(../img/mainsp.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  text-align: center;
+  letter-spacing: 1px;
+  padding-top: 5em;
+}
+.mainVisual p ~ p {
+  font-size: .95em;
   line-height: 1;
 }
+.mainVisual img {
+  width: 300px;
+  height: 100px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
 
-/* メニュー関連 */
-body {
-  position: relative;
-}
-.menu-bg {
-  /* display: none; */
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(34, 34, 34, .95);
-  width: 100vw;
-  height: 100vh;
-  color: #fff;
-}
-.menu-bg .menu {
-  text-align: right;
-  padding: 21px 15px 0;
-
-}
-.menu-bg .nav-menu {
-  position: absolute;
-  z-index: 2;
-  top: 180px;
-  left: 0;
-  right: 0;
+/* リード
+----------------------------------------------- */
+.lead {
+  padding: 2em 1em;
   text-align: center;
-}
-.menu-bg .nav-menu img {
-  width: 42.15px;
-  margin-bottom: 40px;
-}
-.menu-bg .menu-list {
-  font-size: 20px;
+  color: #ffffff;
   font-weight: bold;
+  background-color: rgb(236, 188, 99);
 }
-.menu-bg .menu-list li {
-  margin-bottom: 30px;
+.lead p:first-of-type {
+  letter-spacing: 1px;
 }
-.menu-bg .menu-list li a {
+.btn-inquiry-pc {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  background-color: rgb(202, 118, 93);
+  color: #ffffff;
+  font-weight: bold;
+  line-height: 1.9;
+  border: none;
+  padding: .6em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border-radius: 45px;
   cursor: pointer;
 }
+.btn-inquiry-pc:hover {
+  background-color: rgb(209, 55, 8);
+}
+.lead button ~ p {
+  margin-bottom: 1em;
+}
+.lead .note {
+  margin-top: .5em;
+  font-weight: normal;
+  color: rgb(240, 49, 49);
+  background-color: #eee;
+  display: inline-block;
+  line-height: 1.2;
+  padding-left: .2em;
+}
+.sns button {
+  border: none;
+  color: #ffffff;
+  background: rgb(51, 102, 240);
+  font-size: .75em;
+  padding: 0.2em .7em;
+  border-radius: 5px;
+}
+.sns button:first-of-type {
+  background: rgb(51, 180, 240);
+}
 
+/* ほんとうの自由
+----------------------------------------------- */
+.realFree {
+  text-align: center;
+  padding: 2em 1em 4em;
+  background-image: url(../img/introbottom.jpg);
+  background-position: center bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.realFree h2 {
+  position: relative;
+  font-weight: bold;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  padding: 1em;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.realFree h2:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-top: 3px solid rgb(236, 188, 99);
+  border-left: 3px solid rgb(236, 188, 99);
+}
+.realFree h2:after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-right: 3px solid rgb(236, 188, 99);
+  border-bottom: 3px solid rgb(236, 188, 99);
+}
+.realFree p {
+  margin-top: 1em;
+}
+.realFree p span {
+  font-weight: bold;
+  border-bottom: 5px solid rgb(236, 188, 99);
+}
 
-/* アバウト */
+/* アバウト
+----------------------------------------------- */
+.about::before {
+  content: 'ABOUT';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -28px;
+  display: flex;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  background-color: rgb(236, 188, 99);
+  color: #fff;
+  font-size: .8em;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+}
 .about {
-  background-image: url(../img/about-img.png);
-  background-position: center;
+  position: relative;
+  background-color: rgb(247, 242, 228);
+  text-align: center;
+  padding: 2em 1em 4em;
+}
+.about h2 {
+  position: relative;
+  font-weight: bold;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  padding: 1em;
+}
+.about h2:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-top: 3px solid rgb(236, 188, 99);
+  border-left: 3px solid rgb(236, 188, 99);
+}
+.about h2:after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-right: 3px solid rgb(236, 188, 99);
+  border-bottom: 3px solid rgb(236, 188, 99);
+}
+.about > p {
+  font-weight: bold;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+/* 5つのスキルとは */
+.skills {
+  background-color: #fff;
+  border: 1px solid rgb(236, 188, 99);
+  padding: 1em 2em;
+}
+.skill {
+  margin: .5em 1em;
+}
+.skills img {
+  height: 40px;
+  width: auto;
+  margin-bottom: .6em;
+}
+.skills p {
+  font-size: .6em;
+  margin-bottom: 1em;
+}
+.skills h3 {
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+.skills .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* 教えません 
+----------------------------------------------- */
+.noTeach {
+  background-image: url(../img/aboutsecondbgsp.jpg);
+  background-position: center center;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  padding: 2em 2em;
+  font-weight: bold;
+  white-space: nowrap;
+  letter-spacing: 1px;
+}
+.noTeach h2 {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+.noTeach p {
+  font-size: .8em;
+  margin-bottom: .8em;
+}
+.noTeach > p + p {
+  margin-bottom: 2em;
+}
+.noTeach p span {
+  color: rgb(236, 188, 99);
+}
+.step {
+  background-color: #fff;
+  border-radius: 5px;
+  color: #222;
+  margin-bottom: 1em;
+  padding: 1em 3em;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.step h3 {
+  background-color: rgb(236, 188, 99);
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  font-size: .8em;
+  margin-bottom: 1em;
+}
+/* スキルアップしても */
+.otherSkill {
+  padding: 2em;
+  background-color: #016EA9;
+  color: #ffffff;
+  text-align: center;
+  font-size: .85em;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.otherSkill span {
+  color: rgb(236, 188, 99);
+}
+
+/* 学べること 
+----------------------------------------------- */
+.whatToLearn {
+  text-align: center;
+  padding: 2em 2em 1em;
+  letter-spacing: 1px;
+}
+.whatToLearn h2 {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 2em;
+}
+.whatToLearn h2 span {
+  font-weight: normal;
+  font-size: .8em;
+}
+.images {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.images img {
+  width: 23%;
+}
+.whatToLearn p:last-of-type {
+  font-weight: bold;
+  font-size: .9em;
+}
+
+/* メリット 
+----------------------------------------------- */
+.merits {
+  background-color: rgb(247, 242, 228);
+  padding: 2em 1em 1em;
+  letter-spacing: 1px;
+}
+.merits .heading {
+  position: relative;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1em;
+  padding: 1em;
+  margin-bottom: 2em;
+}
+.merits .heading:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-top: 3px solid rgb(236, 188, 99);
+  border-left: 3px solid rgb(236, 188, 99);
+}
+.merits .heading:after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-right: 3px solid rgb(236, 188, 99);
+  border-bottom: 3px solid rgb(236, 188, 99);
+}
+.merits h2 {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.merit h3 {
+  color: rgb(236, 188, 99);
+  text-align: center;
+  font-weight: bold;
+}
+.merit p {
+  font-size: .8em;
+  margin: 1em 2em 3em;
+}
+.merit img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  margin-bottom: 1em;
+}
+/* 帰国後もサポート */
+.afterReturn {
+  background-color: #fff;
+  border: 1px solid rgb(236, 188, 99);
+  padding: 1em 2em;
+  text-align: center;
+  margin-bottom: 1em;
+}
+.afterReturn h3 {
+  color: rgb(236, 188, 99);
+  font-weight: bold;
+  font-size: 1.1em; 
+  margin-bottom: .8em;
+}
+.afterReturn p:first-of-type {
+  font-weight: bold;
+  font-size: .9em;
+  margin-bottom: .8em;
+  line-height: 1.5;
+}
+.afterReturn p + p {
+  letter-spacing: normal;
+  font-size: .8em;
+}
+.refusal {
+  text-align: center;
+  font-size: .8em;
+  margin-bottom: 2em;
+}
+
+/* 創業メンバー 
+----------------------------------------------- */
+.members {
+  background-image: url(../img/teacherbgsp.jpg);
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 50px 15px;
+  text-align: center;
+  color: #ffffff;
+  padding: 3em 1em 2em;
+  letter-spacing: 1px;
 }
-.about-container {
+.members h2 {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 2em;
+}
+.members p {
+  font-size: .8em;
+}
+.members h2 + p {
+  font-weight: bold;
+  margin-bottom: 10em;
+}
+.member {
+  position: relative;
+  border: 3px solid #fff;
+  padding: 2em .5em 1em;
+  margin-bottom: 8em;
+}
+.member:last-child {
+  margin-bottom: 2em;
+}
+.member img {
+  position: absolute;
+  left: 50%;
+  top: -95px;
+  border-radius: 50%;
+  width: 120px;
+  margin-left: -60px;
+}
+.member:nth-child(3) img {
+  top: -95px;
+}
+.member p {
+  margin-bottom: .5em;
+  font-size: .8em;
+}
+.member h3 {
+  margin-bottom: .8em;
+  font-size: .9em;
+}
+.member h3 + p {
+  text-align: left;
+}
+
+/* Q&A 
+----------------------------------------------- */
+.qanda::before {
+  content: 'Q&A';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 20px;
+  display: flex;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
   background-color: #fff;
+  color: rgb(236, 188, 99);
+  font-size: .8em;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+}
+.qanda {
+  position: relative;
+  background-color: rgb(236, 188, 99);
+  text-align: center;
+  color: #ffffff;
+  padding: 6em 2em 2em;
+}
+.qanda::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  left: 0;
+  width: 0px;
+  height: 0px;
+  margin: auto;
+  bottom: -40px;
+  border-style: solid;
+  border-color: rgb(236, 188, 99) transparent transparent transparent;
+  border-width: 20px;
+  box-sizing: border-box;
+}
+
+.qanda h3 {
+  position: relative;
+  padding: .5em 1em;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: .9em;
+  line-height: 2.2;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.qanda h3:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-top: 3px solid #fff;
+  border-left: 3px solid #fff;
+}
+.qanda h3:after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+}
+/* 実現可能です */
+.feasible {
+  text-align: center;
+  padding: 1em;
+}
+.feasible p {
+  font-size: .8em;
+  margin-bottom: 1.2em;
+}
+.feasible .heading {
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+.voice {
+  display: flex;
+  margin-bottom: 2em;
+  justify-content: space-between;
+}
+.voice .image {
+  width: 35%;
+  height: 35%;
+}
+.voice img {
+  border: 3px solid rgb(236, 188, 99);
+}
+.voice .container {
+  width: 65%;
+  text-align: left;
+  padding-left: 1em;
+  font-size: 1.3em;
+  color: #666;
+}
+.voice .container p + p {
+  text-decoration: underline;
+}
+.voice .container span {
+  font-style: italic; 
+}
+
+/* 学べる内容 
+----------------------------------------------- */
+.content {
+  text-align: center;
+  background-image: url(../img/specialdetailsp.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 3em 1em 1em;
+  color: #ffffff;
+}
+.content h2 {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+.content p {
+  font-weight: bold;
+  font-size: .8em;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+}
+.priorLearning {
+  background-color: #016EA9;
+  margin-bottom: 1em;
+  padding: 2px;
+  border-radius: 10px;
+}
+.traveling {
+  background-color: #016EA9;
+  margin-bottom: 2em;
+  padding: 2px;
+  border-radius: 10px;
+}
+.content h3 {
+  background-color: #016EA9;
+  font-weight: bold;
+  font-size: 1em;
+  letter-spacing: 1px;
+  padding: .5rem;
+}
+.content li {
+  background-color: #ffffff;
+  border-bottom: 2px dotted #eee;
+  color: #333333;
+  font-weight: bold;
+  font-size: .8rem;
+  letter-spacing: 1px;
+  padding: .8rem;
+}
+.content li:last-child {
+  border-bottom: none;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.content .wrapper {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* 永久サポート延長 */
+.eternalSupport {
+  padding: 2em;
+  background-color: #016EA9;
+  color: #ffffff;
+  text-align: center;
+  font-size: .9rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* 受講の流れ 
+----------------------------------------------- */
+.flow {
+  padding: 2rem 1rem;
+}
+.flow h2 {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+}
+.pc-flow {
+  display: none;
+}
+.flowTopic {
+  position: relative;
+}
+.flowTopic a {
+  display: flex;
+  background-color: #FEF5E0;
+  margin-top: .5rem;
+  cursor: pointer;
+  justify-content: space-between;
+}
+.flowTopic a:hover .flow_title {
+  text-decoration: underline;
+}
+.flowImage {
+  padding: .5rem 1rem;
+  width: 35px;
+  height: 35px;
+}
+.flowImage img {
   width: 100%;
   height: 100%;
-  padding: 50px 30px;
 }
-.about .section-desc {
-  font-size: 14px;
+.flowTitle {
+  padding: .5rem 1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: 35px;
+  padding-left: 0;
+  flex: 1;
 }
-.about .section-btn a {
-  line-height: 36px;
+.flowText {
+  display: none;
+  background-color: #FEF5E0;
 }
-
-/* ワークス */
-.works-culture-wrapper {
-  background-color: #F0F0F0;
-  padding: 40px 15px;
+.flowText p {
+  font-size: .8rem;
+  padding: .5rem 1rem;
 }
-.works {
-  margin-bottom: 80px;
+.flowText span {
+  font-weight: bold;
 }
-
-/* レイテストトピック */
-.latestTopics {
-  padding: 40px 15px;
+.flowTopic a::after {
+  content: '\f107';
+  display: block;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  top: 7px;
+  right: 17px;
+  font-size: x-large;
 }
-.latestTopics .topic {
-  padding-top: 19px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #DDDDDD;
-}
-.topic:first-of-type {
-  padding-top: 0;
-}
-.topic:nth-of-type(3) {
-  margin-bottom: 30px;
-}
-.date {
-  margin-bottom: 10px;
-  color: #CECECE;
-  font-size: 10px;
-}
-.topic-ttl {
-  margin-bottom: 10px;
-  font-size: 12px;
+.flowTopic a.on::after {
+  content: '\f106';
 }
 
-/* コンタクト */
-.contact {
-  padding: 40px 15px;
-  background-color: #F2F2F2;
-}
-
-/* フッター */
-.footer {
-  background-color: #525252;
-  text-align: center;
-  font-size: 10px;
+/* なぜバンコクなのか 
+----------------------------------------------- */
+.whyBangkok {
+  background-image: url(../img/bangkokbgsp.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #ffffff;
-  padding: 18px;
+  padding: 2rem 2rem;
+}
+.whyBangkok h2 {
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.4rem;
+  letter-spacing: 2.5px;
+  margin-bottom: 1.7rem;
+}
+.whyBangkok p:first-of-type {
+  font-size: .75rem;
+  margin-bottom: 1rem;
+}
+.whyBangkok ul {
+  padding-left: 1rem;
+  list-style-position: outside;
+}
+.whyBangkok ul li {
+  list-style-type: disc;
+  font-size: .75rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: .6rem;
+}
+.whyBangkok ul li:last-child {
+  margin-bottom: 1rem;
+}
+.whyBangkok p:last-of-type {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* 参加特典 
+----------------------------------------------- */
+.benefits {
+  background-color: #F7C23C;
+  padding: 2rem 1rem;
+}
+.benefits h2 {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+}
+.benefits p {
+  font-size: .8rem;
+  letter-spacing: 1px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 4rem;
+}
+.benefits p span {
+  color: #fff;
+}
+.pc-benefit {
+  display: none;
+}
+.sp-benefit {
+  position: relative;
+  border: 1.5px solid #fff;
+  padding: 2rem;
+}
+.sp-benefit h3 {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  background-color: #F7C23C;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.sp-benefit .eachBenefit {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+.sp-benefit .benefitTitle {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  color: #F7C23C;
+  background-color: #fff;
+  border-radius: 50%;
+  font-size: .8rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+.sp-benefit .benefitContent {
+  width: 75%;
+  display: flex;
+  align-items: center;
+  font-size: .8rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* ボランティアではありません 
+----------------------------------------------- */
+.notVolunteer .wrap {
+  display: none;
+}
+.notVolunteer {
+  text-align: center;
+  color: #ffffff;
+  background-image: url(../img/specialdetailsp.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 2rem 1rem;
+}
+.notVolunteer h2,
+.notVolunteer .heading {
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+.notVolunteer .heading {
+  position: relative;
+  padding: 1rem 0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.notVolunteer .heading:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-top: 3px solid #fff;
+  border-left: 3px solid #fff;
+}
+.notVolunteer .heading:after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+}
+.notVolunteer p {
+  margin-bottom: 2rem;
+  font-weight: bold;
+  font-size: .8rem;
+  letter-spacing: 1px;
+}
+
+/* 創業者からのメッセージ 
+----------------------------------------------- */
+.message {
+  padding: 2.5rem 1rem;
+}
+.message h2 {
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.message .heading {
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.message img {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.message p {
+  margin-bottom: 1rem;
+  font-size: .95rem;
+  letter-spacing: .6px;
+}
+
+/* 資料請求 
+----------------------------------------------- */
+.form {
+  text-align: center;
+  background-color: #F7C23C;
+  padding: 3rem 1rem;
+}
+.form h2 {
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.form p {
+  font-size: .8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+}
+.form form {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.form input,
+.form textarea,
+.form button {
+  display: block;
+  width: 100%;
+  font-size: .8rem;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  box-sizing: border-box;
+  padding: 1rem .5rem;
+}
+.form input {
+  margin-bottom: 1.5rem;
+}
+.form input:last-of-type,
+.form textarea,
+.form button {
+  margin-bottom: 2rem;
+}
+.form input,
+.form textarea {
+  border-radius: 5px;
+}
+.form button {
+  font-size: .75em;
+  background-color: rgb(207, 92, 57);
+  color: #ffffff;
+  border: none;
+  padding: .6em;
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 16px;
+  border-radius: 28px;
+}
+.form textarea {
+  font: 400 13px Arial;
+}
+
+/* よくある質問 
+----------------------------------------------- */
+.faq {
+  padding: 3rem 1rem;
+}
+.faq h2 {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+}
+.question i {
+  color: blue;
+}
+.question {
+  position: relative;
+  font-weight: bold;
+  font-size: .95rem;
+  letter-spacing: 1px;
+  border: .5px solid #eee;
+  padding: .5rem;
+  padding-right: 2rem;
+  margin-bottom: .5rem;
+  cursor: pointer;
+}
+.question:hover {
+  text-decoration: underline;
+}
+.question::after {
+  content: '\f107';
+  display: block;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 17px;
+  font-size: x-large;
+  margin-top: auto;
+  margin-bottom: auto;
+  color: #dedede;
+}
+.question.on::after {
+  content: '\f106';
+}
+.answer {
+  padding: 1rem 1.5rem;
+  font-size: .75rem;
+  font-weight: bold;
+  letter-spacing: .1rem;
+  display: none;
+}
+
+/* フッター 
+----------------------------------------------- */
+.footer {
+  background-color: #ECECEC;
+  text-align: center;
+  padding: 1.5rem 0 .5rem;
+}
+.footer p {
+  font-size: .7rem;
+  color: #444;
+  letter-spacing: 1px;
+}
+.footer p a {
+  color: #23527c;
+}
+.footer p a:hover {
+  text-decoration: underline;
+}
+.footer .sns {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+
+/* ページトップへジャンプ 
+----------------------------------------------- */
+.pageTopArrow {
+  position: fixed;
+  right: 10px;
+  bottom: 15px;
+  width: 50px;
+  height: 50px;
+  background-color: #eee;
+  text-align: center;
+  line-height: 50px;
+  font-size: 1.2em;
+  display: none;
 }
