@@ -1,92 +1,222 @@
+@charset "utf-8";
 
-/* ヘッダー */
-.header {
-  margin-bottom: 627px;
-  position: relative;
+/* ヘッダー
+----------------------------------------------- */
+.header .wrapper {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.header-container {
-  padding: 33px 53px 0;
-}
-.logo {
-  width: 260px;
-}
-.menu {
-  font-size: 24px;
-}
-.menu i {
-  font-size: x-large;
-}
-.copy {
-  margin-left: 66%;
-}
-.mainCopy {
-  margin-left: 66%;
+.header .wrapper .logo p {
+  margin-left: .8em;
+  letter-spacing: .1em;
 }
 
-/* アバウト */
-.about {
-  position: absolute;
-  top: calc(100vh + 120px);
-  left: 0;
-  right: 0;
-  max-width: 1100px;
-  margin-left: 12%;
-  margin-right: 12%;
-  padding: 110px 50px;
+/* リード
+----------------------------------------------- */
+.lead p {
+  font-size: 1.4em;
 }
-.about-container {
-  width: 590px;
-  padding: 50px 30px;
+.lead .btn-inquiry-pc {
+  font-size: 1.6em;
+  padding: 1em;
+  max-width: 90%;
+  max-width: 1000px;
 }
 
-/* ワークス */
-.works-culture-wrapper {
-  background-color: #F0F0F0;
-  padding: 120px 12% 60px;
+/* 教えません 
+----------------------------------------------- */
+.noTeach {
+  background-image: url(../img/aboutsecondbg.jpg);
+}
+.noTeach h2 {
+  font-size: 1.5em;
+}
+.noTeach > p {
+  font-size: 1.2em;
+}
+.steps {
   display: flex;
   justify-content: space-between;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
-
-.works,
-.culture {
-  width: 47%;
+.step {
+  width: 23%;
+  padding: 2em;
+}
+.step h3 {
+  font-size: 1em;
+  margin-bottom: 1.5em;
+}
+.step p:first-of-type {
+  margin-bottom: 1em;
+}
+.step p {
   margin-bottom: 0;
 }
 
-/* レイテストトピック */
-.latestTopics {
-  padding: 60px 12%;
-  display: flex;
-  justify-content: space-between;
-}
-.latestTopics .inner-container {
-  width: 700px;
-  padding-top: 70px;
-}
-.topic-ttl a {
-  font-size: 14px;
-}
-.latestTopics .wrapper {
-  display: flex;
-  justify-content: flex-end;
+/* スキルアップしても 
+----------------------------------------------- */
+.otherSkill {
+  padding: 1.5em;
+  font-size: 1.3em;
 }
 
-/* コンタクト */
-.contact {
+/* メリット 
+----------------------------------------------- */
+.merits .heading {
+  font-size: 1.2em;
+}
+.merits h2 {
+  font-size: 1.4em;
+}
+.merits .wrapper {
   display: flex;
   justify-content: space-between;
-  flex-direction: row-reverse;
-  align-items: center;
-  padding: 60px 12% 120px;
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.contact .section-img {
-  margin-bottom: 0;
-  flex: 1.31;
+.merit {
+  width: 30%;
 }
-.contact .container {
-  margin-right: 80px;
-  flex: 1;
+.merit h3 {
+  text-align-last: left;
+  font-size: 1.1em;
 }
-.contact .section-desc {
-  width: auto;
+.merit p {
+  margin: 0 0 2em;
+  font-size: 1em;
 }
+/* 帰国後もサポート */
+.afterReturn {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.afterReturn h3 {
+  font-size: 1.3em;
+}
+.afterReturn p:first-of-type {
+  font-size: 1.2em;
+}
+.afterReturn p + p { font-weight: bold;
+  font-size: 1em;
+  letter-spacing: 1px;
+}
+/* 実現可能です */
+.feasible .heading {
+  font-size: 1.5em;
+}
+.feasible p {
+  font-size: .9em;
+  margin-bottom: 1.2em;
+}
+.thirdParty {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+.voice {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.voice img {
+  width: 245px;
+}
+
+/* 学べる内容 
+----------------------------------------------- */
+.content .wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  max-width: 1000px;
+}
+.content .wrapper > div {
+  width: 45%;
+  align-self: flex-start;
+}
+
+/* 受講の流れ 
+----------------------------------------------- */
+.eachFlow {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 4rem;
+}
+.flow_topic {
+  width: 20%;
+}
+.flow_text {
+  width: 80%;
+}
+.flow_text p {
+  font-size: .9rem;
+  padding: .5rem 1rem;
+}
+.flow_text span {
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 1rem;
+}
+
+/* 参加特典 
+----------------------------------------------- */
+.benefits h2 {
+  font-size: 1.5rem;
+}
+.benefits p {
+  font-size: 1.1rem;
+}
+.pc-benefit {
+  display: flex;
+  padding: 4rem 0 3rem;
+}
+.pc-benefit h3 {
+  font-size: 1.5rem;
+  width: 45%;
+  top: -30px;
+}
+.pc-benefit h3 .nowrap {
+  display: none;
+}
+
+/* ボランティアではありません 
+----------------------------------------------- */
+.notVolunteer h2,
+.notVolunteer .heading {
+  font-size: 1.5rem;
+}
+.notVolunteer p {
+  font-size: 1.1rem;
+}
+
+/* よくある質問 
+----------------------------------------------- */
+.faq {
+  padding: 4rem 3rem;
+}
+.faq h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+}
+.eachQuestion {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.question {
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+.answer {
+  font-size: 1rem;
+}
+
