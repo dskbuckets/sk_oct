@@ -1,193 +1,99 @@
 @charset "utf-8";
 
-/* 改行 */
-br.nowrap {
-  display: none;
-}
-br.narrowNowrap {
-  display: inline;
-}
-
 /* ヘッダー
 ----------------------------------------------- */
-.header h1 {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
-  align-items: flex-end;
+.header .wrapper {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.logo p {
-  padding-bottom: 0px;
-  font-size: 1.2em;
-  font-weight: bold;
-}
-.logo img {
-  width: 130px;
-}
-.header .wrapper .btn-inquiry-sp {
-  display: none;
-}
-.header .wrapper .btn-inquiry-pc {
-  display: block;
-}
-.header .btn-inquiry-pc {
-  width: 260px;
-  font-size: .8em;
-  font-weight: normal;
-  margin: 0.6em;
-}
-
-/* メインビジュアル
------------------------------------------------ */
-.mainVisual {
-  background-image: url(../img/main.jpg);
-  background-size: cover;
-  height: 440px;
-}
-.mainVisual p:first-of-type {
-  margin-top: 3em;
-  font-size: 1.5em;
-}
-.mainVisual p ~ p {
-  font-size: 1em;
-  line-height: 1;
-}
-.mainVisual img {
-  width: 300px;
-  height: 100px;
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
+.header .wrapper .logo p {
+  margin-left: .8em;
+  letter-spacing: .1em;
 }
 
 /* リード
 ----------------------------------------------- */
 .lead p {
-  font-size: 1.2em;
+  font-size: 1.4em;
 }
 .lead .btn-inquiry-pc {
-  font-size: 1.4em;
+  font-size: 1.6em;
   padding: 1em;
   max-width: 90%;
   max-width: 1000px;
 }
 
-/* ほんとうの自由
------------------------------------------------ */
-.realFree {
-  background-position: center bottom -50px;
-  padding-top: 2em ;
-  padding-bottom: 8em;
-}
-.realFree br.show {
-  display: none;
-}
-.realFree h2 {
-  font-size: 1.6em;
-}
-.realFree p {
-  font-size: 1.2em;
-}
-
-/* アバウト
------------------------------------------------ */
-.about::before {
-  top: -38px;
-  width: 80px;
-  height: 80px;
-  border-radius: 40px;
-  font-size: 1em;
-}
-.about h2 {
-  position: relative;
-  max-width: 750px;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 1.4em;
-}
-.about > p {
-  font-size: 1.2em;
-}
-/* 5つのスキルとは */
-.skills {
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.skills h3 {
-  font-size: 1.2em;
-}
-.skills p {
-  font-size: .8em;
-}
-
 /* 教えません 
 ----------------------------------------------- */
 .noTeach {
-  background-image: url(../img/aboutsecondbgsp.jpg);
-  padding: 3em 1em;
+  background-image: url(../img/aboutsecondbg.jpg);
 }
 .noTeach h2 {
-  font-size: 1.3em;
+  font-size: 1.5em;
+}
+.noTeach > p {
+  font-size: 1.2em;
+}
+.steps {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.step {
+  width: 23%;
+  padding: 2em;
+}
+.step h3 {
+  font-size: 1em;
+  margin-bottom: 1.5em;
+}
+.step p:first-of-type {
   margin-bottom: 1em;
 }
-.noTeach p {
-  font-weight: bold;
-  font-size: 1em;
+.step p {
+  margin-bottom: 0;
 }
 
 /* スキルアップしても 
 ----------------------------------------------- */
 .otherSkill {
-  font-size: 1em;
   padding: 1.5em;
-}
-
-/* 学べること 
------------------------------------------------ */
-.whatToLearn h2 {
   font-size: 1.3em;
-}
-.images {
-  max-width: 900px;
-  margin: 2em auto;
-}
-.images img {
-  max-width: 180px;
 }
 
 /* メリット 
 ----------------------------------------------- */
 .merits .heading {
-  font-size: 1.1em;
-  max-width: 800px;
+  font-size: 1.2em;
+}
+.merits h2 {
+  font-size: 1.4em;
+}
+.merits .wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
 }
-.merits h2 {
-  font-size: 1.3em;
-}
 .merit {
-  text-align: center;
-}
-.merit img {
-  text-align: center;
-  width: auto;
-  height: auto;
-  object-fit: fill;
-  margin-bottom: 1em;
+  width: 30%;
 }
 .merit h3 {
+  text-align-last: left;
   font-size: 1.1em;
 }
 .merit p {
-  font-size: .95em;
-  text-align: left;
-  margin-left: 4em;
-  margin-right: 4em;
+  margin: 0 0 2em;
+  font-size: 1em;
 }
 /* 帰国後もサポート */
 .afterReturn {
-  width: 80%;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -195,112 +101,23 @@ br.narrowNowrap {
   font-size: 1.3em;
 }
 .afterReturn p:first-of-type {
-  font-size: 1.1em;
+  font-size: 1.2em;
 }
-.afterReturn p + p {
+.afterReturn p + p { font-weight: bold;
   font-size: 1em;
   letter-spacing: 1px;
 }
-.refusal {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* 創業メンバー 
------------------------------------------------ */
-.members {
-  background-image: url(../img/teacherbg.jpg);
-  text-align: center;
-}
-.members h2 {
-  font-size: 1.3em;
-}
-.members h2 + p {
-  font-size: .9em;
-  margin-bottom: 15em;
-}
-.members .wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 5%;
-  width: 90%;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.member {
-  padding: 2em 1em 1em;
-  margin-bottom: 12em;
-}
-.member:nth-child(3),
-.member:last-child {
-  margin-bottom: 2em;
-}
-.member img {
-  position: absolute;
-  left: 50%;
-  top: -170px;
-  width: 200px;
-  margin-left: -100px;
-}
-.member p {
-  font-size: .9em;
-}
-.member h3 {
-  font-size: 1em;
-}
-
-/* Q&A 
------------------------------------------------ */
-.qanda::before {
-  top: 20px;
-  width: 75px;
-  height: 75px;
-  margin: 0 auto;
-  background-color: #fff;
-  color: rgb(236, 188, 99);
-  font-size: 1.1em;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-}
-.qanda {
-  padding: 8em 4em 4em;
-}
-.qanda h3 {
-  font-size: 1.1em;
-  line-height: 2.2;
-}
-.qanda h3:before {
-  position: absolute;
-  left: 0;
-  top: 0;
-  content: '';
-  display: block;
-  width: 20px;
-  height: 20px;
-  border-top: 3px solid #fff;
-  border-left: 3px solid #fff;
-}
-.qanda h3:after {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  content: '';
-  display: block;
-  width: 20px;
-  height: 20px;
-  border-right: 3px solid #fff;
-  border-bottom: 3px solid #fff;
-}
 /* 実現可能です */
 .feasible .heading {
-  font-size: 1.3em;
+  font-size: 1.5em;
 }
 .feasible p {
   font-size: .9em;
   margin-bottom: 1.2em;
+}
+.thirdParty {
+  font-size: 1.1em;
+  font-weight: bold;
 }
 .voice {
   max-width: 1000px;
@@ -313,247 +130,69 @@ br.narrowNowrap {
 
 /* 学べる内容 
 ----------------------------------------------- */
-.content {
-  background-image: url(../img/specialdetail.jpg);
+.content .wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  max-width: 1000px;
 }
-/* 永久サポート延長 */
-.eternalSupport {
-  font-size: 1.1rem;
+.content .wrapper > div {
+  width: 45%;
+  align-self: flex-start;
 }
 
 /* 受講の流れ 
 ----------------------------------------------- */
-.flow {
-  padding: 4rem 2rem 3rem;
-}
-.flow h2 {
-  font-size: 1.4rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-  margin-bottom: 2rem;
-}
-.sp-flow {
-  display: none;
-}
-.pc-flow {
-  display: block;
-}
-.flow_mainImage {
-  display: block;
-  width: 100%;
-  max-width: 1000px;
-  margin: 2rem auto 3rem;
-}
-.flowline {
-  width: 70%;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-.flowline img {
-  width: 100%;
-}
 .eachFlow {
-  display: flex;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 2rem 3rem;
-  background-color: #FEF5E0;
-  border-radius: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 4rem;
 }
 .flow_topic {
-  width: 30%;
-}
-.flow_topic a {
-  flex-direction: column;
-  width: 100%;
-}
-.flow_topic a.disabled {
-  pointer-events: none;
-}
-.flow_topic a::after {
-  display: none;
-}
-.flow_image {
-  width: 50%;
-  max-width: 120px;
-  margin: 2rem auto;
-  flex-grow: 1;
-}
-.flow_image img {
-  width: 100%;
-}
-.noMargin {
-  margin: 0 auto 1rem;
-}
-.flow_title {
-  text-align: center;
-  font-size: 1.1rem;
-  font-weight: bold;
-  letter-spacing: 1px;
+  width: 20%;
 }
 .flow_text {
-  width: 70%;
+  width: 80%;
 }
 .flow_text p {
-  font-size: .8rem;
+  font-size: .9rem;
   padding: .5rem 1rem;
 }
 .flow_text span {
   font-weight: bold;
   letter-spacing: 1px;
-  font-size: .9rem;
-}
-
-/* なぜバンコクなのか 
------------------------------------------------ */
-.whyBangkok {
-  background-image: url(../img/bangkokbg.jpg);
-  padding: 4rem 6rem;
-}
-.whyBangkok h2 {
-  text-align: left;
-  font-size: 1.5rem;
-}
-.whyBangkok p:first-of-type {
-  font-size: .95rem;
-}
-.whyBangkok ul li {
-  font-size: .95rem;
-}
-.whyBangkok ul li:last-child {
-  margin-bottom: 1.1rem;
-}
-.whyBangkok p:last-of-type {
-  font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 /* 参加特典 
 ----------------------------------------------- */
-.benefits {
-  padding: 4rem 2rem;
-}
 .benefits h2 {
-  font-size: 1.3rem;
-  letter-spacing: 2px;
-}
-.sp-benefit {
-  display: none;
-}
-.pc-benefit {
-  display: block;
-  position: relative;
+  font-size: 1.5rem;
 }
 .benefits p {
-  font-size: .9rem;
+  font-size: 1.1rem;
 }
 .pc-benefit {
-  display: block;
-  border: 1.5px solid #fff;
-  padding: 3rem;
+  display: flex;
+  padding: 4rem 0 3rem;
 }
 .pc-benefit h3 {
-  display: inline-block;
-  text-align: center;
-  font-size: 1.3rem;
-  letter-spacing: 1px;
-  font-weight: bold;
-  position: absolute;
-  left: 0;
-  right: 0;
+  font-size: 1.5rem;
+  width: 45%;
   top: -30px;
-  width: 35%;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #F7C23C;
 }
 .pc-benefit h3 .nowrap {
-  display: inline;
-}
-.pc-benefit .eachBenefit {
-  background-color: #fff; 
-  width: 230px;
-  height: 230px;
-  border-radius: 50%;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 1rem;
-  margin: 0 auto 1rem;
-}
-.pc-benefit .benefitTitle {
-  color: #F7C23C;
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
-  letter-spacing: 1.5px;
-}
-.pc-benefit .benefitContent {
-  font-weight: bold;
-  letter-spacing: 1px;
-  font-size: .9rem;
+  display: none;
 }
 
 /* ボランティアではありません 
 ----------------------------------------------- */
-.notVolunteer .wrap {
-  display: inline;
-}
-.notVolunteer {
-  background-image: url(../img/specialdetail.jpg);
-  padding: 4rem 3rem;
-}
 .notVolunteer h2,
 .notVolunteer .heading {
-  font-size: 1.4rem;
-}
-.notVolunteer .heading:before {
-  width: 30px;
-  height: 30px;
-}
-.notVolunteer .heading:after {
-  width: 30px;
-  height: 30px;
+  font-size: 1.5rem;
 }
 .notVolunteer p {
-  font-size: 1rem;
-}
-
-/* 創業者からのメッセージ 
------------------------------------------------ */
-.message {
-  padding: 3rem 2rem;
-}
-.message h2 {
-  font-size: 1.4rem;
-}
-.message .heading {
-  font-weight: bold;
-  letter-spacing: 1px;
   font-size: 1.1rem;
-  margin-bottom: 2rem;
-}
-.message .wrapper {
-  display: flex;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.message-img {
-  width: 30%;
-  padding-right: 2rem;
-}
-.messageFromSometani {
-  width: 70%;
-}
-
-/* 資料請求 
------------------------------------------------ */
-.form h2 {
-  font-size: 1.4rem;
-}
-.form p {
-  font-size: .9rem;
 }
 
 /* よくある質問 
@@ -563,33 +202,20 @@ br.narrowNowrap {
 }
 .faq h2 {
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: bold;
   letter-spacing: 1px;
   margin-bottom: 2rem;
 }
+.eachQuestion {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .question {
   padding: 1rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 .answer {
-  font-size: .9rem;
-  padding: 1.5rem;
-}
-
-/* フッター 
------------------------------------------------ */
-.footer {
-  padding: 3rem 0 2rem;
-}
-
-/* ページトップへジャンプ 
------------------------------------------------ */
-.pageTopArrow {
-  right: 20px;
-  bottom: 50px;
-  width: 70px;
-  height: 70px;
-  line-height: 70px;
-  font-size: 1.5em;
+  font-size: 1rem;
 }
